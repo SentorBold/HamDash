@@ -58,7 +58,8 @@ public class Movement : MonoBehaviour{
             dashed = false;
             dashtime = startDashTime;
         }
-        else if(Input.GetKeyDown(KeyCode.Space)){
+        else if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Z))
+        {
 
             dashed = true;
             if (direction == 1){
