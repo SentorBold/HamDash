@@ -8,7 +8,7 @@ public class StageController : MonoBehaviour
 
     [SerializeField] GameObject[] enemies;
 
-    int enemyNum = 5;
+    int enemyNum = 1;
    void Awake()
     {
         if (!instance)
