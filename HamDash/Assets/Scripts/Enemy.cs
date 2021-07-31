@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
             GameObject newProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
             newProjectile.transform.localRotation = transform.rotation;
             newProjectile.transform.localScale = transform.localScale;
-            newProjectile.GetComponent<Projectile>().SetDirection(direction);
+            //newProjectile.GetComponent<Projectile>().SetDirection(direction);
         }
     }
 }
