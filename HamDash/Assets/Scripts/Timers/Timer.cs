@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     int sd = 1;
     public Text timer;
     float timeCounter = 0f;
-    float stagecounter = 20f;
+    float stagecounter = 5;
 
     void Update()
     {
@@ -18,9 +18,11 @@ public class Timer : MonoBehaviour
         if(timeCounter >= stagecounter)
         {
             stagecounter += 5;
-            print("x");
+           
+            StageController.instance.InstantiateStage();
 
-        
+
+
         }
  
 
