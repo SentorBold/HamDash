@@ -2,24 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Direction { right,left,up,down}
+public enum Direction { right, left, up, down }
 public class Projectile : MonoBehaviour
 {
     Direction myDirection;
 
     [SerializeField] float speed;
-    [SerializeField] float lifespan;
     Vector3 dir;
     void Start()
     {
-        Destroy(gameObject, lifespan);
+        Destroy(gameObject, 3);
     }
 
-  
+
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position,Player.instance.transform.position,1*speed*Time.deltaTime) ;
-        //transform.position += dir * speed * Time.deltaTime ;
+        transform.position += dir * speed * Time.deltaTime;
     }
 
     public void SetDirection(Direction direction)
@@ -28,7 +26,7 @@ public class Projectile : MonoBehaviour
         switch (myDirection)
         {
             case Direction.right:
-                dir = Vector3.right; 
+                dir = Vector3.right;
                 break;
             case Direction.left:
                 dir = Vector3.left;
@@ -47,6 +45,7 @@ public class Projectile : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            other.GetComponent<Health>().DoDamage();
             Debug.Log("Player took damage");
             Destroy(gameObject);
         }
