@@ -8,7 +8,7 @@ public class StageController : MonoBehaviour
 
     [SerializeField] GameObject[] enemies;
 
-    int enemyNum = 15;
+    int enemyNum = 5;
    void Awake()
     {
         if (!instance)
@@ -29,7 +29,7 @@ public class StageController : MonoBehaviour
             int randomEnemy = Random.Range(0, enemies.Length);
             enemies[randomEnemy].SetActive(true);
         }
-        
+        enemyNum++;
     }
 
     private void ResetStage()
