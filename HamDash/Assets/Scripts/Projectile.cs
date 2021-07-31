@@ -8,16 +8,21 @@ public class Projectile : MonoBehaviour
     Direction myDirection;
 
     [SerializeField] float speed;
+    [SerializeField] float lifespan;
     Vector3 dir;
     void Start()
     {
-        Destroy(gameObject, 3);
+        Destroy(gameObject, lifespan);
     }
 
   
     void Update()
     {
-        transform.position += dir * speed * Time.deltaTime ;
+        Vector3 lookTarget = transform.position - Player.instance.transform.position;
+        Vector3 targetDir = new Vector3(lookTarget.x, lookTarget.y, 0);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Player.instance.transform.rotation, Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position,Player.instance.transform.position,1*speed*Time.deltaTime) ;
+        //transform.position += dir * speed * Time.deltaTime ;
     }
 
     public void SetDirection(Direction direction)
