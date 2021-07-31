@@ -9,11 +9,11 @@ public class MenuCode : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z ))
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("LoadingScreen");
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("LoadingScreen");
         }
     }
 }
