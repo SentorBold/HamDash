@@ -3,14 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class Timer : MonoBehaviour
 {
+    int sd = 1;
     public Text timer;
     float timeCounter = 0f;
+    float stagecounter = 20f;
 
     void Update()
     {
         timeCounter += Time.deltaTime;
         timer.text = (int)timeCounter + "";
+        if(timeCounter >= stagecounter)
+        {
+            stagecounter += 5;
+            print("x");
+
+        
+        }
+ 
+
     }
 }
