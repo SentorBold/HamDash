@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Loading : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] float loadingTime;
     void Start()
     {
-        Invoke("Game", 5f);
+        Invoke("Game", loadingTime);
     }
 
    void Game ()

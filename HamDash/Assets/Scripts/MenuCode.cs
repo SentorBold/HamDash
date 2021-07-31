@@ -7,13 +7,10 @@ public class MenuCode : MonoBehaviour
  
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z ))
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Space))
         {
             SceneManager.LoadScene("LoadingScreen");
         }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SceneManager.LoadScene("LoadingScreen");
-        }
+
     }
 }
