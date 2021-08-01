@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timer;
 
     float timeCounter = 0f;
-    float stagecounter = 3;
+    float stagecounter = 5;
     float posChangeCounter=2f;
 
     void Update()

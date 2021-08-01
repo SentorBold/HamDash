@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 505625d9102173b46adee6aacd8c6d40, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,6 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea24e60521a8df4093609200d94afe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite:
+  - {fileID: 21300000, guid: 505625d9102173b46adee6aacd8c6d40, type: 3}
+  - {fileID: 21300000, guid: c8669a4a069805442b99d3c0586c1cfe, type: 3}
   speed: 4.5
 --- !u!61 &5338360850909078070
 BoxCollider2D:

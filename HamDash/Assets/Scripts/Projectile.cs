@@ -2,13 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public enum Direction { right, left, up, down }
 public class Projectile : MonoBehaviour
 {
     Direction myDirection;
 
+    [SerializeField] Sprite[] sprite;
     [SerializeField] float speed;
     Vector3 dir;
+    private void Awake()
+    {
+        GetComponent<SpriteRenderer>().sprite = sprite[Random.Range(0, sprite.Length)];
+    }
     void Start()
     {
         Destroy(gameObject, 3);
