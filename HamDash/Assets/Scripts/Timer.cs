@@ -28,4 +28,8 @@ public class Timer : MonoBehaviour
             StageController.instance.AddEnemyNum();
         }
     }
+    public int GetTime()
+    {
+        return (int)timeCounter;
+    }
 }

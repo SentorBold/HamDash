@@ -4,7 +4,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class EndGameButton : MonoBehaviour
 {
-  public void MenuButton()
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Game();
+        }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            MenuButton();
+        }
+    }
+    public void MenuButton()
     {
         SceneManager.LoadScene("StartMenu");
     }

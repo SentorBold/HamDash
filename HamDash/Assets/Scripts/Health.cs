@@ -19,6 +19,7 @@ public class Health : MonoBehaviour
         SetHealthText();
         if (health <= 0)
         {
+            FindObjectOfType<ScoreHolder>().SetScore();
             Destroy(gameObject);
             SceneManager.LoadScene("EndGame");
         }
