@@ -29,8 +29,11 @@ public class StageController : MonoBehaviour
         {
             int randomEnemy = Random.Range(0, enemies.Length);
             enemies[randomEnemy].SetActive(true);
-        }
-        if(enemyNum<maxEnemyNum)
+        }       
+    }
+    public void AddEnemyNum()
+    {
+        if (enemyNum < maxEnemyNum)
             enemyNum++;
     }
 
