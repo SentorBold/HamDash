@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 
 public class Timer : MonoBehaviour
 {
+<<<<<<< Updated upstream
     int sd = 1;
     public Text timer;
+=======
+    public TextMeshProUGUI timer;
+>>>>>>> Stashed changes
     float timeCounter = 0f;
     float stagecounter = 3;
 
