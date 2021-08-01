@@ -23,7 +23,7 @@ public class HealtSpawner : MonoBehaviour
         BottomRight = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
        
 
-        Healt();
+       
     }
 
     // Update is called once per frame

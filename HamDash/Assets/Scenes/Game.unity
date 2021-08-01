@@ -2071,6 +2071,7 @@ GameObject:
   - component: {fileID: 1217889643}
   - component: {fileID: 1217889642}
   - component: {fileID: 1217889644}
+  - component: {fileID: 1217889645}
   m_Layer: 0
   m_Name: Stage Controler
   m_TagString: Untagged
@@ -2239,6 +2240,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1217889645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217889641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f6966b13e636401a9efafdcd0bb71e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heal: {fileID: 2043333399928448954, guid: 3e9bccca7eaeb444b911d564f1d544d4, type: 3}
 --- !u!1001 &1242971558
 PrefabInstance:
   m_ObjectHideFlags: 0

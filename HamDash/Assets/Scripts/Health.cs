@@ -28,4 +28,10 @@ public class Health : MonoBehaviour
     {
         healthtext.text = health.ToString();
     }
+   public void GainHealt()
+    {
+        health++;
+        SetHealthText();
+    }
+
 }
