@@ -6,25 +6,18 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    int sd = 1;
     public Text timer;
     float timeCounter = 0f;
-    float stagecounter = 3;
+    float stageCounter = 3;
 
     void Update()
     {
         timeCounter += Time.deltaTime;
         timer.text = (int)timeCounter + "";
-        if(timeCounter >= stagecounter)
+        if(timeCounter >= stageCounter)
         {
-            stagecounter += 3;
-           
+            stageCounter += 5;          
             StageController.instance.InstantiateStage();
-
-
-
         }
- 
-
     }
 }

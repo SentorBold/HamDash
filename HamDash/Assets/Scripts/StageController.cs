@@ -29,7 +29,8 @@ public class StageController : MonoBehaviour
             int randomEnemy = Random.Range(0, enemies.Length);
             enemies[randomEnemy].SetActive(true);
         }
-        enemyNum++;
+        if(enemyNum<10)
+            enemyNum++;
     }
 
     private void ResetStage()
