@@ -6,12 +6,8 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-<<<<<<< Updated upstream
-    int sd = 1;
-    public Text timer;
-=======
     public TextMeshProUGUI timer;
->>>>>>> Stashed changes
+
     float timeCounter = 0f;
     float stagecounter = 3;
 
@@ -25,11 +21,6 @@ public class Timer : MonoBehaviour
            
             StageController.instance.InstantiateStage();
 
-     
-
-
         }
- 
-
     }
 }
