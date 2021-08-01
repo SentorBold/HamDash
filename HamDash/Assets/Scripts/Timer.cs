@@ -6,8 +6,17 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
+<<<<<<< Updated upstream
     public TextMeshProUGUI timer;
 
+=======
+
+    
+    public TextMeshProUGUI timer;
+
+   
+
+>>>>>>> Stashed changes
     float timeCounter = 0f;
     float stagecounter = 3;
 
@@ -17,7 +26,7 @@ public class Timer : MonoBehaviour
         timer.text = (int)timeCounter + "";
         if(timeCounter >= stagecounter)
         {
-            stagecounter += 3;
+            stagecounter += 5;
            
             StageController.instance.InstantiateStage();
 
