@@ -4,49 +4,28 @@ using UnityEngine;
 
 public class HealtSpawner : MonoBehaviour
 {
-
-
     public GameObject heal;
-    Vector2 bottomLeft;
-    Vector2 BottomRight;
-    float timeCounter = 0f;
-    float spawnheal = 20f;
-
-    float x;
-    float y;
-
-   
+    [SerializeField]float spawnheal = 20f;
 
     void Start()
     {
-        bottomLeft = Camera.main.ScreenToWorldPoint(new Vector2(0, 0));
-        BottomRight = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-       
-
-       
+        StartCoroutine(SpawnHeal());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator SpawnHeal()
     {
-        timeCounter += Time.deltaTime;
-        if (timeCounter >= spawnheal)
+        while (gameObject)
         {
-            spawnheal += 20;
+            yield return new WaitForSeconds(spawnheal);
             Healt();
-
-
-
-
-
-
         }
     }
-     void Healt()
+    void Healt()
     {
-        x = Random.Range(bottomLeft.x, BottomRight.x);
-        y  = Random.Range(bottomLeft.y, BottomRight.y);
-        GameObject newHealt = Instantiate(heal);
-        newHealt.transform.position = new Vector2(x, y);
+        float x = Random.Range(-5f, 5f); ;
+        float y = Random.Range(-4.5f, 3f);
+        Vector2 pos = new Vector2(x, y);
+
+        Instantiate(heal,pos,Quaternion.identity);
     }
 }

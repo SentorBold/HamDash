@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timer;
 
     float timeCounter = 0f;
-    float stagecounter = 5;
+    float stagecounter = 10;
     float posChangeCounter=2f;
 
     void Update()
@@ -19,13 +19,12 @@ public class Timer : MonoBehaviour
         timer.text = (int)timeCounter + "";
         if (timeCounter >= posChangeCounter)
         {
-            Debug.Log("Pos Changed");
             posChangeCounter = timeCounter+2;
             StageController.instance.InstantiateStage();
         }
         if(timeCounter >= stagecounter)
         {
-            stagecounter += 5;   
+            stagecounter += 10;   
             StageController.instance.AddEnemyNum();
         }
     }
