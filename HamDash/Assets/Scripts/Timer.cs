@@ -21,6 +21,7 @@ public class Timer : MonoBehaviour
            
             StageController.instance.InstantiateStage();
 
+     
 
 
         }
